@@ -1,0 +1,141 @@
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:
+psql (14.2)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# create table department (dept_id int, dname text, location text);
+CREATE TABLE
+
+postgres=# select * from department;
+ dept_id | dname | location
+---------+-------+----------
+(0 rows)
+
+postgres=# \d department;
+              Table "public.department"
+  Column  |  Type   | Collation | Nullable | Default
+----------+---------+-----------+----------+---------
+ dept_id  | integer |           |          |
+ dname    | text    |           |          |
+ location | text    |           |          |
+
+
+postgres=#
+
+
+postgres=# select dept_id, dname from department;
+ dept_id | dname
+---------+-------
+(0 rows)
+
+
+postgres=# select dept_id, location from department;
+ dept_id | location
+---------+----------
+(0 rows)
+
+
+postgres=# select dept_id, location, dname from department;
+ dept_id | location | dname
+---------+----------+-------
+(0 rows)
+
+
+postgres=# select * from department;
+ dept_id | dname | location
+---------+-------+----------
+(0 rows)
+
+
+postgres=# insert into department values(101, 'CS', 'Block-A');
+INSERT 0 1
+postgres=# select * from department;
+ dept_id | dname | location
+---------+-------+----------
+     101 | CS    | Block-A
+(1 row)
+
+
+postgres=# insert into department values(102, 'EC', 'Block-B');
+INSERT 0 1
+postgres=# insert into department values(103, 'ME', 'Block-C');
+INSERT 0 1
+postgres=# select * from department;
+ dept_id | dname | location
+---------+-------+----------
+     101 | CS    | Block-A
+     102 | EC    | Block-B
+     103 | ME    | Block-C
+(3 rows)
+
+
+postgres=# select dname from department;
+ dname
+-------
+ CS
+ EC
+ ME
+(3 rows)
+
+
+postgres=# select * from department;
+ dept_id | dname | location
+---------+-------+----------
+     101 | CS    | Block-A
+     102 | EC    | Block-B
+     103 | ME    | Block-C
+(3 rows)
+
+
+postgres=# select dname from department;
+ dname
+-------
+ CS
+ EC
+ ME
+(3 rows)
+
+
+LINE 1: select dname.dept_id from department;
+               ^
+postgres=# select dname,dept_id from department;
+ dname | dept_id
+-------+---------
+ CS    |     101
+ EC    |     102
+ ME    |     103
+(3 rows)
+
+
+postgres=# create table student (st_id int, sname text, subject text, dept_id text);
+
+insert into student values(111,'Rajesh','DSA',101);
+
+queries--
+1. WAQ to display students only from department 101?
+2. WQA to display student whose roll no is 111?
+select * from student where st_id = 111;
+3. WAQ to display students whose name is starting with 'R'?
+postgres=# select * from student where sname = 'R%';
+ st_id | sname | subject | dept_id
+-------+-------+---------+---------
+(0 rows)
+
+
+postgres=# select * from student where sname like 'R%';
+ st_id | sname  | subject | dept_id
+-------+--------+---------+---------
+   111 | Rajesh | DSA     | 101
+   555 | Raju   | WT      | 102
+(2 rows)
+
+4. WAQ to display students information whose name is ending with h?
+5. WAQ to display students name and department whose name containes 'a'?
+
+\i C:\Development\JEEDevopsCapgemini\lectures\postgress\create_hr_schema.sql
