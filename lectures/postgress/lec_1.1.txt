@@ -1,0 +1,71 @@
+Database
+
+Data --> usefull information data
+Database management system --> system to organise, manage my data
+
+file structure, spreadsheet --> register, Excel files
+
+Microsoft Excel is my DBMS
+
+RDBMS --> Relational Database Management system
+
+Relation --> Organising your data in terms of table(rows and column) format, where one table is related to another table
+
+Example -->
+Department --> attributes/columns
+
+Relational DBMS --> one table is logically related to another table --> common column in these table
+
+dept_id		dname		location
+101		CS		Block-A
+102		EC		Block-B
+103		ME		Block-C
+
+
+Student
+st_id		sname		subject		dept_id
+111		Rajesh		DSA		101
+222		Suraj		ECE		101
+333		Tom		RT		102
+444		John		YI		103
+
+SQL based Vendors
+mysql, oracle DB --> Oracle
+DB2 --> IBM
+Aurora, RDS --> amazon services
+SQL Server --> Microsoft
+Sybase --> OS
+Postgres --> OS
+SQLLight --> dev/test small database/not suitable for production
+
+
+No-SQL catagory
+MongoDB
+CouchDB
+Cassendra
+HBase
+
+SQL --> Structured Query Language
+single language to manage Database and access data 
+
+select * from products where price < 500;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

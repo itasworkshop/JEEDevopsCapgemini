@@ -1,0 +1,7 @@
+Gradle/Maven - Build Tool
+
+manages build cycle as well
+
+Build --> code --> executable(jar/war file)
+
+JAR --> java archiver --> all compiled collection of java code(class file)
