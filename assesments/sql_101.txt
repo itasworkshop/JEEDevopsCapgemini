@@ -1,0 +1,6 @@
+Use HR database for below queries
+1. WAQ to display second highest salary in HR schema.
+2. WAQ to display name of employee who is earning maximum in his/her department.
+3. WAQ to display emplyees count who are working from same location.
+4. WAQ to display number of employees joined year wise.
+5. WAQ to top 2 earning employee name and salary in each department. 
