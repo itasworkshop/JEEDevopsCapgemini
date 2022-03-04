@@ -138,4 +138,41 @@ postgres=# select * from student where sname like 'R%';
 4. WAQ to display students information whose name is ending with h?
 5. WAQ to display students name and department whose name containes 'a'?
 
-\i C:\Development\JEEDevopsCapgemini\lectures\postgress\create_hr_schema.sql
+
+generating 'HR' schema
+\i 'C:\\Development\\JEEDevopsCapgemini\\lectures\\postgress\\create_hr_schema.sql'
+
+postgres=# select first_name,hire_date from employees limit 5;
+ first_name |      hire_date
+------------+---------------------
+ Steven     | 1987-06-17 00:00:00
+ Neena      | 1989-09-21 00:00:00
+ Lex        | 1993-01-13 00:00:00
+ Alexander  | 1990-01-03 00:00:00
+ Bruce      | 1991-05-21 00:00:00
+(5 rows)
+
+
+postgres=# select first_name, to_char(hire_date,'yyyy') from employees limit 5;
+ first_name | to_char
+------------+---------
+ Steven     | 1987
+ Neena      | 1989
+ Lex        | 1993
+ Alexander  | 1990
+ Bruce      | 1991
+(5 rows)
+
+select first_name from employees where to_char(hire_date,'yyyy') = '2000';
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+postgres=# select first_name,to_char(hire_date,'mm') hiring from employees where to_char(hire_date,'mm') like '12';
+ first_name | hiring
+------------+--------
+ Luis       | 12
+ Den        | 12
+ Shelli     | 12
+ Ki         | 12
+ Nanette    | 12
+ Louise     | 12
+ Randall    | 12
+(7 rows)
+
+postgres=# select first_name,salary original_salary,salary+500 bonus from employees;
+
+
+NULL --> empty value
+is null
+is not null
+
+
+postgres=# select first_name,salary, commission_pct from employees where commission_pct is not null;
+ first_name  |  salary  | commission_pct
+-------------+----------+----------------
+ John        | 14000.00 |           0.40
+ Karen       | 13500.00 |           0.30
+ Alberto     | 12000.00 |           0.30
+ Gerald      | 11000.00 |           0.30
+ Eleni       | 10500.00 |           0.20
+ Peter       | 10000.00 |           0.30
+ David       |  9500.00 |           0.25
+ Peter       |  9000.00 |           0.25
+ Christopher |  8000.00 |           0.20
+ Nanette     |  7500.00 |           0.20
+ Oliver      |  7000.00 |           0.15
+ Janette     | 10000.00 |           0.35
+
+
+Nested query or Subquery - query inside query
+example 
+WAQ to display employees who is earning more than Oliver?
+	--> what is oliver's salary
+	--> greater than
+
+postgres=# select first_name,salary from employees where salary > (select salary from employees where first_name like 'Oliver');
+ first_name  |  salary
+-------------+----------
+ Steven      | 24000.00
+ Neena       | 17000.00
+ Lex         | 17000.00
+ Alexander   |  9000.00
+ Nancy       | 12000.00
+ Daniel      |  9000.00
+ John        |  8200.00
+ Ismael      |  7700.00
+
+Join --> displaying result from multiple tables
+
+WQA to display first_name and his department name?
+
+postgres=# select employees.first_name, departments.department_name from employees,departments where employees.department_id = departments.department_id;
+ first_name  | department_name
+-------------+------------------
+ Steven      | Executive
+ Neena       | Executive
+ Lex         | Executive
+ Alexander   | IT
+ Bruce       | IT
+ David       | IT
+ Valli       | IT
+ Diana       | IT
+ Nancy       | Finance
+
+with alias -->
+
+select e.first_name, d.department_name
+from employees e,departments d
+where e.department_id = d.department_id;
+
+1. WAQ to display employees who are working with Steven?
+2. WAS to display employees name and work location?
+
+
+
+
+
+
+
+
+
+
+
+
