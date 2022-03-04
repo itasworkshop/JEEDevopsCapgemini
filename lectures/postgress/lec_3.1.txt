@@ -76,8 +76,51 @@ select e.first_name, d.department_name
 from employees e,departments d
 where e.department_id = d.department_id;
 
-1. WAQ to display employees who are working with Steven?
+1. WAQ to display employees who are working with Oliver?
 2. WAS to display employees name and work location?
+3. employee name with manager name?
+postgres=# 
+select e.first_name ,m.first_name 
+from employees e, employees m 
+where e.manager_id = m.employee_id;
+
+
+ first_name  | first_name
+-------------+------------
+ Neena       | Steven
+ Lex         | Steven
+ Alexander   | Lex
+ Bruce       | Alexander
+ David       | Alexander
+ Valli       | Alexander
+ Diana       | Alexander
+ Nancy       | Neena
+ Daniel      | Nancy
+ John        | Nancy
+ Ismael      | Nancy
+ Jose Manuel | Nancy
+ Luis        | Nancy
+
+Aggregate function --> group of data
+avg, sum, count, min, max
+
+where vs having
+having --> use it with aggregated calculation
+where --> normal condition
+
+postgres=# 
+select department_id,max(salary) highest_dept 
+from employees 
+where department_id in (60,90,10) 
+group by department_id 
+having max(salary) > 8000;
+
+ department_id | highest_dept
+---------------+--------------
+            60 |      9000.00
+            90 |     24000.00
+(2 rows)
+
 
 
 
