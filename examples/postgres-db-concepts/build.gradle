@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+jar{
+    manifest{
+        attributes(
+                'Main-Class':'org.mypackage.HelloWorld'
+        )
+    }
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
+
+}
+
+test {
+    useJUnitPlatform()
+}

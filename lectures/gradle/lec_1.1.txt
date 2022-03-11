@@ -2,6 +2,23 @@ Gradle/Maven - Build Tool
 
 manages build cycle as well
 
+java file --> compile --> class file
+
+command --> function/classess --> package --> library
+
+dependencies --> our project is dependent on other java projects/library
+
 Build --> code --> executable(jar/war file)
 
 JAR --> java archiver --> all compiled collection of java code(class file)
+
+
+advantages of gradle build tool
+1. Dependency management
+
+
+
+
+
+
+
