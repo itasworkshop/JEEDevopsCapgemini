@@ -17,6 +17,15 @@ insert into department values(101, 'CS', 'Block-A');
 insert into department values(102, 'EC', 'Block-B');
 insert into department values(103, 'ME', 'Block-C');
 
+2. create detail table with foreign key
+create table student (
+st_id int primary key, 
+sname text, 
+subject text, 
+dept_id int,
+foreign key(dept_id) references department(dept_id)
+);
+
 
 
 create table student (
