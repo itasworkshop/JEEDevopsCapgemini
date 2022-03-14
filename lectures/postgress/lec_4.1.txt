@@ -1,0 +1,51 @@
+constraints --> rules and regulation for data integrity
+
+1. unique constraint
+2. Not null constraint
+3. primary key constraint --> to indentify individual rows in database table --> (unique + not null)
+4. Foreign key constraint
+
+steps to apply FK
+1. first master table should have primary key -- department
+create table department (
+dept_id int primary key, 
+dname text, 
+location text
+);
+
+insert into department values(101, 'CS', 'Block-A');
+insert into department values(102, 'EC', 'Block-B');
+insert into department values(103, 'ME', 'Block-C');
+
+
+
+create table student (
+st_id int primary key, 
+sname text unique, 
+subject text not null, 
+dept_id text
+);
+
+how to apply constraints -->
+1. create table
+2. alter table
+
+create table with contraints
+
+create table student (
+st_id int primary key, 
+sname text unique, 
+subject text not null, 
+dept_id text
+);
+
+questions
+1. diff between primary key and unique constraint.
+primary --> unique + not null
+unique allows null
+
+2. how many nulls can be inserted in unique constrains column?
+no boundary
+
+
+

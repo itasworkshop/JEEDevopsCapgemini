@@ -10,6 +10,19 @@ public class TestJdbcPostgres {
 
        Statement st = conn.createStatement();
 
+       //int sucess =
+               st.executeUpdate("insert into student values(666,'NewStu','NewSub',103)");
+
+        //int sucess = st.executeUpdate("update student set sname= 'john' where st_id= 666");
+
+        //insert,update and delete operation returns row count, so executeUpdate return 1 or more,zero
+        //DDL like create table has no row count
+
+        //int sucess = st.executeUpdate("create table demo(id int,name text)");
+
+        int sucess = st.executeUpdate("delete from student");
+
+       System.out.println("Rows changed "+sucess);
        ResultSet result = st.executeQuery("select * from student");
 
        while(result.next()){
