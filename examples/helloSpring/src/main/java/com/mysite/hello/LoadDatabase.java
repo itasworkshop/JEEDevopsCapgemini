@@ -16,7 +16,7 @@ public class LoadDatabase {
 		return args -> {
 			log.info("Loading " + repository.save(new Student("Rajesh")));
 			//System.out.println(repository.save(new Student("Rajesh")));
-			log.info("Loading " + repository.save(new Student("Tom")));
+			log.info("Loading " + repository.save(new Student("Tommmy")));
 			log.info("Loading " + repository.save(new Student("John")));
 		};
 		
