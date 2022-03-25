@@ -1,0 +1,39 @@
+Spring
+
+web applications --> available throuhgout web
+
+internet --> web address --> ip address --> server
+
+
+client --> server architecture
+
+server --> h/w --> comparatively more powerful than our regular system
+software --> to entertain request coming from client
+
+client --> browser, command etc
+
+web --> html pages
+
+web applications technology stack
+java --> spring boot framework
+framework is something already written part of app which would be common throughout use cases so that we can focus more on business
+
+python --> Flask, Django
+javascript --> Node(express) ,Angular
+
+
+spring boot --> open source web app frame work 
+microservices, cloud, batch, reactive, fast, secure we dev
+
+MVC --> model --> database stuff
+	view --> user facing
+	controller --> for specific path which reponse
+
+
+
+
+
+
+
+
+

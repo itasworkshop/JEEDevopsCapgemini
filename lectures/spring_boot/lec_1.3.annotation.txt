@@ -1,0 +1,36 @@
+Annotation
+
+1. @Controller
+ans: which response to generate for a specific request path
+@RequestMapping("/tools")
+	String tools() {
+		return "Hello from my first Tools controller";
+	}
+
+2. @RestController
+ans: @Controller + @ResponseBody
+no seperate use of @ResponseBody
+
+3. @RequestMapping("/")
+ans: Annotation for mapping web requests onto methods in request-handling classeswith flexible method signatures. 
+@RequestMapping("/tools")
+	String tools() {
+		return "Hello from my first Tools controller";
+	}
+
+4. @SpringBootApplication
+ans: auto-configuration and component scanning
+
+Indicates a configuration class that declares one or more @Bean methods and also triggers auto-configuration and component scanning. This is a convenienceannotation that is equivalent to declaring @Configuration, @EnableAutoConfiguration and @ComponentScan.
+
+5. @Entity
+ans: Specifies that the class is an entity. This annotation is applied to theentity class. Denotes respective database table.
+
+6. @Id
+ans: Specifies the primary key of an entity.
+
+7. @Configuration
+Indicates that a class declares one or more @Bean methods andmay be processed by the Spring container to generate bean definitions andservice requests for those beans at runtime.
+
+8. @Repository
+ans: Indicates that an annotated class is a "Repository", originally defined byDomain-Driven Design (Evans, 2003) as "a mechanism for encapsulating storage,retrieval, and search behavior which emulates a collection of objects".
