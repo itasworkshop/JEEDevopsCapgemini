@@ -1,0 +1,8 @@
+1) spring boot architecture
+2) IOC - DI dependency injection
+
+
+problem statement
+calculate employees bonus on respnse based on id
+
+/employees/{id} --> with bonus
