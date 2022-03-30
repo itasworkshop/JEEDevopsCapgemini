@@ -12,6 +12,12 @@ public class Student {
 	private String name;
 	
 	public Student(){}
+	
+	public Student( Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
 
 	public Student( String name) {
 		super();

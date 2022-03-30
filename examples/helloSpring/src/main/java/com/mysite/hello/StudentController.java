@@ -1,6 +1,7 @@
 package com.mysite.hello;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,11 @@ public class StudentController {
 	@GetMapping("/students")
 	List<Student> getAll(){
 		return repository.findAll();
+	}
+	
+	@GetMapping("/students/{id}")
+	Optional<Student> getStudent(@PathVariable Long id){
+		return repository.findById(id);
 	}
 	
 	@PostMapping("/students")

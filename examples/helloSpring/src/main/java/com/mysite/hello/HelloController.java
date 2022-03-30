@@ -12,9 +12,10 @@ public class HelloController {
 	@RequestMapping("/")
 	@ResponseBody
 	String hello() {
-		return "Hello from my first controller";
+		return "hello from my first controller";
 	}
 	
+	/*
 	@RequestMapping("/tools")
 	String tools() {
 		return "Hello from my first Tools controller";
@@ -24,5 +25,6 @@ public class HelloController {
 	String hello1() {
 		return "Hello from my new test controller";
 	}
+	*/
 
 }
